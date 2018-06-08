@@ -21,7 +21,7 @@ Route::group(['prefix' => 'school'], function () {
     Route::post('/register', 'School\Auth\RegisterController@register')->name('school.register.post');
 
     Route::post('/password/email', 'School\Auth\ForgotPasswordController@sendResetLinkEmail')->name('school.password.request');
-    Route::post('/password/reset', 'School\Auth\ResetPasswordController@reset')->name('school.password.email');
+    Route::post('/password/reset', 'School\Auth\ResetPasswordController@reset')->name('school.password.email');    
+    Route::get('/password/reset/{token}', 'School\Auth\ResetPasswordController@showResetForm')->name('school.password.reset.token');
     Route::get('/password/reset', 'School\Auth\ForgotPasswordController@showLinkRequestForm')->name('school.password.reset');
-    Route::get('/password/reset/{token}', 'School\Auth\ResetPasswordController@showResetForm')->name('school.password.resetToken');
 });

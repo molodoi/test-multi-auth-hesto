@@ -37,7 +37,7 @@ class RegisterController extends AdminBaseController
      */
     public function __construct()
     {
-        $this->middleware('admin.guest', ['except' => ['logout', 'showRegistrationForm']]);
+        // $this->middleware('admin.guest', ['except' => ['logout', 'showRegistrationForm']]);
     }
 
     /**

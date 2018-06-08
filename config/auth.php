@@ -127,19 +127,19 @@ return [
     'passwords' => [
         'schools' => [
             'provider' => 'schools',
-            'table' => 'school_password_resets',
+            'table' => 'password_resets',
             'expire' => 60,
         ],
 
         'renters' => [
             'provider' => 'renters',
-            'table' => 'renter_password_resets',
+            'table' => 'password_resets',
             'expire' => 60,
         ],
 
         'admins' => [
             'provider' => 'admins',
-            'table' => 'admin_password_resets',
+            'table' => 'password_resets',
             'expire' => 60,
         ],
 

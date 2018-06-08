@@ -55,7 +55,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('frontend.password.request.get') }}">
+                                <a class="btn btn-link" href="{{ route('frontend.password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>

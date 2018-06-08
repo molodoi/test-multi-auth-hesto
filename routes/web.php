@@ -15,7 +15,6 @@
 //     return view('welcome');
 // });
 
-//Auth::routes();
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),

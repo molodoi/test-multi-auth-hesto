@@ -28,16 +28,6 @@ class LoginController extends FrontendBaseController
     protected $redirectTo = '/';
 
     /**
-     * Show the application's login form.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function showLoginForm()
-    {
-        return view('frontend.auth.login');
-    }
-
-    /**
      * Create a new controller instance.
      *
      * @return void
@@ -45,5 +35,15 @@ class LoginController extends FrontendBaseController
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLoginForm()
+    {
+        return view('frontend.auth.login');
     }
 }

@@ -5,6 +5,9 @@ var pathAssets = './resources/assets/renter';
 var pathPublic = './public/renter';
 
 mix.babel([
+    pathAssets + '/js/jquery-3.3.1.slim.min.js',
+    pathAssets + '/js/popper.min.js',
+    pathAssets + '/js/bootstrap.min.js',
     pathAssets + '/js/app.js',
 ], pathPublic + '/js/app.js');
 

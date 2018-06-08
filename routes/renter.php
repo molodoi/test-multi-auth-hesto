@@ -11,8 +11,8 @@ Route::group(['prefix' => 'renter'], function () {
 
     Route::post('/password/email', 'Renter\Auth\ForgotPasswordController@sendResetLinkEmail')->name('renter.password.request');
     Route::post('/password/reset', 'Renter\Auth\ResetPasswordController@reset')->name('renter.password.email');
+    Route::get('/password/reset/{token}', 'Renter\Auth\ResetPasswordController@showResetForm')->name('renter.password.reset.token');    
     Route::get('/password/reset', 'Renter\Auth\ForgotPasswordController@showLinkRequestForm')->name('renter.password.reset');
-    Route::get('/password/reset/{token}', 'Renter\Auth\ResetPasswordController@showResetForm')->name('renter.password.resetToken');
 });
 
 // Route::get('/home', function () {

@@ -38,7 +38,7 @@ class LoginController extends AdminBaseController
      */
     public function __construct()
     {
-        //$this->middleware('admin.guest', ['except' => ['logout', 'showLoginForm']]);
+        $this->middleware('admin.guest', ['except' => ['logout', 'showLoginForm']]);
     }
 
     /**

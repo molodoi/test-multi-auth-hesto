@@ -23,4 +23,14 @@ class HomeController extends FrontendBaseController
     {
         return view('frontend.pages.home');
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function leaflet()
+    {
+        return view('frontend.pages.leaflet');
+    }
 }

@@ -35,14 +35,19 @@ return [
     */
 
     'guards' => [
+        'school' => [
+            'driver' => 'session',
+            'provider' => 'schools',
+        ],
+
         'renter' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'renters',
         ],
 
         'admin' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'admins',
         ],
 
         'web' => [
@@ -74,6 +79,12 @@ return [
     */
 
     'providers' => [
+        'schools' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\School::class,
+            'table' => 'users',
+        ],
+
         'renters' => [
             'driver' => 'eloquent',
             'model' => App\Models\Renter::class,
@@ -114,6 +125,12 @@ return [
     */
 
     'passwords' => [
+        'schools' => [
+            'provider' => 'schools',
+            'table' => 'school_password_resets',
+            'expire' => 60,
+        ],
+
         'renters' => [
             'provider' => 'renters',
             'table' => 'renter_password_resets',

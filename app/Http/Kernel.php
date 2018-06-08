@@ -51,17 +51,23 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'renter' => \App\Http\Middleware\RedirectIfNotRenter::class,
-        'renter.guest' => \App\Http\Middleware\RedirectIfRenter::class,
-        'admin' => \App\Http\Middleware\RedirectIfNotAdmin::class,
-        'admin.guest' => \App\Http\Middleware\RedirectIfAdmin::class,
+        'school' => \App\Http\Middleware\RedirectIfNotSchool::class,
+        'school.guest' => \App\Http\Middleware\RedirectIfSchool::class,
         'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'localize' => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        'localizationRedirect' => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        'localeSessionRedirect' => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        'localeViewPath' => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
+        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'renter' => \App\Http\Middleware\RedirectIfNotRenter::class,
+        'renter.guest' => \App\Http\Middleware\RedirectIfRenter::class,
+        'admin' => \App\Http\Middleware\RedirectIfNotAdmin::class,
+        'admin.guest' => \App\Http\Middleware\RedirectIfAdmin::class,
     ];
 }
